@@ -1,22 +1,12 @@
 import {defineConfig} from 'vite';
-// import singlefile from 'vite-plugin-singlefile';
-import { viteSingleFile } from "vite-plugin-singlefile"
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import react from '@vitejs/plugin-react';
 
 
 export default defineConfig({
+    base: '/gdev2018/', //https://vitejs.dev/guide/static-deploy.html#github-pages
     plugins: [
-        cssInjectedByJsPlugin(),
-        viteSingleFile()
+        react()
     ],
-    build: {
-        cssCodeSplit: false,
-        rollupOptions: {
-            input: {
-                main: './src/index.jsx',
-            },
-        },
-    },
     test: {
         globals: true,
         environment: 'jsdom',

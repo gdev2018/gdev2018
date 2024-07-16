@@ -1,24 +1,26 @@
 {
   "name": "gdev2018.github.io",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://gdev2018.github.io/gdev2018",
   "scripts": {
     "start": "vite --open",
     "build": "vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "github-pages-publish": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-cron-schedule-typescript": "^3.0.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.6",
     "@testing-library/react": "^14.1.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "jsdom": "^23.0.1",
     "vite": "^5.0.8",
-    "vite-plugin-css-injected-by-js": "^3.5.1",
-    "vite-plugin-singlefile": "^2.0.2",
     "vitest": "^1.1.1"
   }
 }
